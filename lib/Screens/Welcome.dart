@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
+  static const String id = 'Welcome';
 
   @override
   Widget build(BuildContext context) {
