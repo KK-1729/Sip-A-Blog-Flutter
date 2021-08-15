@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'Screens/Welcome.dart';
-import 'Screens/Blogspage.dart';
 import 'Screens/About.dart';
+import 'Screens/Blogspage.dart';
 import 'Screens/Contact.dart';
+import 'Screens/Welcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
         Welcome.id: (context) => Welcome(),
         Blogspage.id: (context) => Blogspage(),
         About.id: (context) => About(),
-        Contact.id: (context) => Contact()
-      }
+        Contact.id: (context) => Contact(),
+      },
     );
   }
 }
