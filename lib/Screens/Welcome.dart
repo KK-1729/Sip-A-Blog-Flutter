@@ -32,18 +32,24 @@ class _BodyBuild extends State<BodyBuild> {
   Widget build(BuildContext context) {
     Widget currentWidget = Welcome();
     WidgetBuilder builder = (BuildContext context) => Welcome();
-    switch (_selectedIndex) {
-      case 0:
-        // currentWidget = Blogspage();
-        builder = (BuildContext context) => Blogspage();
-        break;
-      case 1:
-        currentWidget = About();
-        break;
-      case 2:
-        currentWidget = Contact();
-        break;
-    }
+    void switchindex ( int index){
+      // switch (index) {
+      //   case 0:
+      //   // currentWidget = Blogspage();
+      //     builder = (BuildContext context) => Blogspage();
+      //     break;
+      //   case 1:
+      //     currentWidget = About();
+      //     break;
+      //   case 2:
+      //     currentWidget = Contact();
+      //     break;
+      // }
+      setState(() {
+        _selectedIndex = index;
+      });
+    };
+
     return Scaffold(
       body: Container(
         margin: EdgeInsets.only(top: 2.0),
@@ -161,7 +167,11 @@ class _BodyBuild extends State<BodyBuild> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
-        onTap: (int index) => setState(() => _selectedIndex = index),
+        onTap: (int index) => setState(() {
+           print(_selectedIndex);
+          // _selectedIndex = index;
+          switchindex(index);
+         }),
       ),
     );
   }
