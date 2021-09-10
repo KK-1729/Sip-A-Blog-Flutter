@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sip_a_blog/Screens/Blogs/Blog2.dart';
+import 'Blogs/Blog1.dart';
+import 'Blogs/Blog2.dart';
 
 class Blogspage extends StatelessWidget {
   const Blogspage({Key? key}) : super(key: key);
@@ -17,33 +20,44 @@ class Blogspage extends StatelessWidget {
 
                 Flexible(
                   flex: 1,
-                  child: Container(
-                    child: Column(
-                      children: [
-                        Container(
+                  child: TextButton(
+                    child: Container(
+                      child: Column(
+                        children: [
+                          Container(
 
-                            child: Image.asset('images/logo.png')
-                        ),
-                        Container(child: Text('Trial text'))
-                      ],
+                              child: Image.asset('images/logo.png')
+                          ),
+                          Container(child: Text('Trial text'))
+                        ],
+                      ),
                     ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context){return Blog1();}));
+                      }
                   ),
+
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 Flexible(
                   flex: 1,
-                  child: Container(
-                    child: Column(
-                      children: [
-                        Container(
+                  child: TextButton(
+                    child: Container(
+                      child: Column(
+                        children: [
+                          Container(
 
-                            child: Image.asset('images/logo.png')
-                        ),
-                        Container(child: Text('Trial text'))
-                      ],
+                              child: Image.asset('images/logo.png')
+                          ),
+                          Container(child: Text('Trial text'))
+                        ],
+                      ),
                     ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context){return Blog2();}));
+                      }
                   ),
                 )
               ],
@@ -54,3 +68,5 @@ class Blogspage extends StatelessWidget {
     );
   }
 }
+
+

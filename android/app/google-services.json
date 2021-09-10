@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "73636770460",
+    "project_id": "sip-a-blog",
+    "storage_bucket": "sip-a-blog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73636770460:android:b2331dd95155534e7db359",
+        "android_client_info": {
+          "package_name": "com.Sathvik.sip_a_blog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73636770460-bj7diiua0is8e3s5e657p1lc313gm92s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaDqg4lRYU3moTxeexwSVOXixitShtGdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73636770460-bj7diiua0is8e3s5e657p1lc313gm92s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
