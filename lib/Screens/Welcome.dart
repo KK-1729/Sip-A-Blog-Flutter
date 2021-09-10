@@ -1,10 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sip_a_blog/Screens/Blogspage.dart';
-
-import 'About.dart';
-import 'Contact.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -32,23 +28,6 @@ class _BodyBuild extends State<BodyBuild> {
   Widget build(BuildContext context) {
     Widget currentWidget = Welcome();
     WidgetBuilder builder = (BuildContext context) => Welcome();
-    void switchindex ( int index){
-      // switch (index) {
-      //   case 0:
-      //   // currentWidget = Blogspage();
-      //     builder = (BuildContext context) => Blogspage();
-      //     break;
-      //   case 1:
-      //     currentWidget = About();
-      //     break;
-      //   case 2:
-      //     currentWidget = Contact();
-      //     break;
-      // }
-      setState(() {
-        _selectedIndex = index;
-      });
-    };
 
     return Scaffold(
       body: Container(
@@ -150,29 +129,8 @@ class _BodyBuild extends State<BodyBuild> {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.photo_album),
-      //       label: 'Blogs',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.book),
-      //       label: 'About',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.contact_page),
-      //       label: 'Contact',
-      //     ),
-      //   ],
-      //   currentIndex: _selectedIndex,
-      //   selectedItemColor: Colors.amber[800],
-      //   onTap: (int index) => setState(() {
-      //      print(_selectedIndex);
-      //     // _selectedIndex = index;
-      //     switchindex(index);
-      //    }),
-      // ),
+
+
     );
   }
 }
