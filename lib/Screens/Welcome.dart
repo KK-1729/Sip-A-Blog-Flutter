@@ -150,29 +150,29 @@ class _BodyBuild extends State<BodyBuild> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.photo_album),
-            label: 'Blogs',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'About',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.contact_page),
-            label: 'Contact',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: (int index) => setState(() {
-           print(_selectedIndex);
-          // _selectedIndex = index;
-          switchindex(index);
-         }),
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.photo_album),
+      //       label: 'Blogs',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.book),
+      //       label: 'About',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.contact_page),
+      //       label: 'Contact',
+      //     ),
+      //   ],
+      //   currentIndex: _selectedIndex,
+      //   selectedItemColor: Colors.amber[800],
+      //   onTap: (int index) => setState(() {
+      //      print(_selectedIndex);
+      //     // _selectedIndex = index;
+      //     switchindex(index);
+      //    }),
+      // ),
     );
   }
 }

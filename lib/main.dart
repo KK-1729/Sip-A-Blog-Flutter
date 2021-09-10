@@ -45,10 +45,10 @@ class MyApp extends StatelessWidget {
     Widget build(BuildContext context) {
       return MaterialApp(
         home: Scaffold(
-            body: Pagelist[_selectedIndex],
-            bottomNavigationBar: Theme(
-              data: ,
-              child: BottomNavigationBar(
+            body: IndexedStack(
+              index: _selectedIndex,
+                children: Pagelist),
+            bottomNavigationBar: BottomNavigationBar(
                 unselectedItemColor: Colors.black,
                 items: [
               BottomNavigationBarItem(
@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
                   switchindex(index);
                 }),
               ),
-            )
+
         ) ,
         // initialRoute: About.id,
         // routes: {
