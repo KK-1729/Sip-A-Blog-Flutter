@@ -27,7 +27,7 @@ class Blogspage extends StatelessWidget {
 
                               child: Image.asset('images/Blog1_image.jpeg')
                           ),
-                          Container(child: Text('Trial text'))
+                          Container(child: Text('Positive thoughts on life', style: TextStyle(fontSize: 18.0, color: Colors.black),))
                         ],
                       ),
                     ),
@@ -49,7 +49,7 @@ class Blogspage extends StatelessWidget {
 
                               child: Image.asset('images/Blog2_image.jpeg')
                           ),
-                          Container(child: Text('Trial text'))
+                          Container(child: Text('The LGBTQ pride month',style: TextStyle(fontSize: 18.0, color: Colors.black),))
                         ],
                       ),
                     ),
@@ -66,22 +66,4 @@ class Blogspage extends StatelessWidget {
   }
 }
 
-// Flexible(
-// flex: 1,
-// child:  TextButton(
-// child: Container(
-// child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-// children: [
-// Container(
-//
-// child: Image.asset('images/Blog2_image.jpeg')
-// ),
-// Container(child: Text('Trial text'))
-// ],
-// ),
-// ),
-// onPressed: () {
-// Navigator.push(context, MaterialPageRoute(builder: (context){return Blog2();}));
-// }
-// ),
-// )
+

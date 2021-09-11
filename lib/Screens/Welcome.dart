@@ -57,6 +57,7 @@ class _BodyBuild extends State<BodyBuild> {
                 ),
               ],
             ),
+            SizedBox(height: 20.0),
             CarouselSlider(
               items: [
                 Container(
