@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Blog1 extends StatelessWidget {
-  const Blog1({Key? key}) : super(key: key);
+
+  final int blogno = 1;
+
+  // final firestore = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {

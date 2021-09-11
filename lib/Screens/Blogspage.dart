@@ -12,21 +12,20 @@ class Blogspage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: Row(
           children: [
-            Row(
 
-              children: [
-
-                Flexible(
-                  flex: 1,
-                  child: TextButton(
+            Flexible(
+              flex: 1,
+              child: Column(
+                children: [
+                  TextButton(
                     child: Container(
                       child: Column(
                         children: [
                           Container(
 
-                              child: Image.asset('images/logo.png')
+                              child: Image.asset('images/Blog1_image.jpeg')
                           ),
                           Container(child: Text('Trial text'))
                         ],
@@ -36,31 +35,29 @@ class Blogspage extends StatelessWidget {
                         Navigator.push(context, MaterialPageRoute(builder: (context){return Blog1();}));
                       }
                   ),
-
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Flexible(
-                  flex: 1,
-                  child: TextButton(
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              child: Column(children: [
+                TextButton(
                     child: Container(
-                      child: Column(
+                      child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
 
-                              child: Image.asset('images/logo.png')
+                              child: Image.asset('images/Blog2_image.jpeg')
                           ),
                           Container(child: Text('Trial text'))
                         ],
                       ),
                     ),
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context){return Blog2();}));
-                      }
-                  ),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context){return Blog2();}));
+                    }
                 )
-              ],
+              ],),
             )
           ],
         ),
@@ -69,4 +66,22 @@ class Blogspage extends StatelessWidget {
   }
 }
 
-
+// Flexible(
+// flex: 1,
+// child:  TextButton(
+// child: Container(
+// child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+// children: [
+// Container(
+//
+// child: Image.asset('images/Blog2_image.jpeg')
+// ),
+// Container(child: Text('Trial text'))
+// ],
+// ),
+// ),
+// onPressed: () {
+// Navigator.push(context, MaterialPageRoute(builder: (context){return Blog2();}));
+// }
+// ),
+// )
