@@ -28,7 +28,7 @@ class _ContactBuildState extends State<ContactBuild> {
         // margin: EdgeInsets.only(top: 2.0),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/background1.jpg'),
+            image: AssetImage('images/pinkbackground.jfif'),
             fit: BoxFit.fill,
           ),
         ),

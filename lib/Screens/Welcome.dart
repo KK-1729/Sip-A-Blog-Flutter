@@ -30,11 +30,12 @@ class _BodyBuild extends State<BodyBuild> {
     WidgetBuilder builder = (BuildContext context) => Welcome();
 
     return Scaffold(
+
       body: Container(
         margin: EdgeInsets.only(top: 2.0),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/background1.jpg'),
+            image: AssetImage('images/pinkbackground.jfif'),
             fit: BoxFit.fill,
           ),
         ),
@@ -57,6 +58,7 @@ class _BodyBuild extends State<BodyBuild> {
                 ),
               ],
             ),
+            SizedBox(height: 20.0),
             CarouselSlider(
               items: [
                 Container(

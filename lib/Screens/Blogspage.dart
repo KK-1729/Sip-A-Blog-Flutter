@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:sip_a_blog/Screens/Blogs/Blog2.dart';
 import 'Blogs/Blog1.dart';
 import 'Blogs/Blog2.dart';
+import 'package:sip_a_blog/widgets/blogpreview.dart';
+import 'package:sip_a_blog/Screens/Blogs/Blog1.dart';
 
 class Blogspage extends StatelessWidget {
   const Blogspage({Key? key}) : super(key: key);
@@ -12,76 +14,40 @@ class Blogspage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Row(
-          children: [
-
-            Flexible(
-              flex: 1,
-              child: Column(
-                children: [
-                  TextButton(
-                    child: Container(
-                      child: Column(
-                        children: [
-                          Container(
-
-                              child: Image.asset('images/Blog1_image.jpeg')
-                          ),
-                          Container(child: Text('Trial text'))
-                        ],
-                      ),
-                    ),
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context){return Blog1();}));
-                      }
-                  ),
-                ],
-              ),
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/pinkbackground.jfif'),
+              fit: BoxFit.fill,
             ),
-            Flexible(
-              flex: 1,
-              child: Column(children: [
-                TextButton(
-                    child: Container(
-                      child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
+          ),
+          child: Row(
+            children: [
 
-                              child: Image.asset('images/Blog2_image.jpeg')
-                          ),
-                          Container(child: Text('Trial text'))
-                        ],
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){return Blog2();}));
-                    }
-                )
-              ],),
-            )
-          ],
+              Flexible(
+                flex: 1,
+                child: Column(
+                  children: [
+                    Blog_preview('Positive thoughts on life',
+                        Image.asset('images/Blog1_image.jpeg'),
+                        Blog1()),
+                  ],
+                ),
+              ),
+              Flexible(
+                flex: 1,
+                child: Column(children: [
+                  Blog_preview('The LGBTQ pride month', Image.asset('images/Blog2_image.jpeg'), Blog2())
+                ],),
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
-// Flexible(
-// flex: 1,
-// child:  TextButton(
-// child: Container(
-// child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-// children: [
-// Container(
-//
-// child: Image.asset('images/Blog2_image.jpeg')
-// ),
-// Container(child: Text('Trial text'))
-// ],
-// ),
-// ),
-// onPressed: () {
-// Navigator.push(context, MaterialPageRoute(builder: (context){return Blog2();}));
-// }
-// ),
-// )
+
+
+
